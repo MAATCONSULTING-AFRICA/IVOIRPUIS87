@@ -2,17 +2,23 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\backend\BlogController;
+use App\Http\Controllers\backend\DevisController;
+use App\Http\Controllers\backend\EquipeController;
+use App\Http\Controllers\backend\PortfolioController;
+use App\Http\Controllers\backend\ServiceController;
+use App\Http\Controllers\DashboardController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+
+Route::get('/admin', function () {
+    return view('backend.auth.login');
+});
+Route::get('/login', [AuthController::class, 'index'])->name('index');
+Route::post('/login', [AuthController::class, 'login'])->name('login');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/btp', [HomeController::class, 'btp'])->name('btp');
@@ -20,3 +26,67 @@ Route::get('/imprimerie', [HomeController::class, 'imprimerie'])->name('imprimer
 Route::get('/gestion-immobiliere', [HomeController::class, 'gestionImmobiliere'])->name('gestion-immobiliere');
 Route::get('/construction-metallique', [HomeController::class, 'constructionMetallique'])->name('construction-metallique');
 Route::get('/entretien-nettoyage', [HomeController::class, 'entretienNettoyage'])->name('entretien-nettoyage');
+Route::get('/service/detail/{id}', [HomeController::class, 'serviceDetail'])->name('service.detail');
+
+Route::middleware(['auth'])->group(function () {
+    Route::prefix('profil')->name('profil.')->group(function () {
+        Route::get('index',[ProfileController::class, 'index'])->name('index');
+        Route::get('create',[ProfileController::class, 'create'])->name('create');
+        Route::get('edit/{id}',[ProfileController::class, 'edit'])->name('edit');
+        Route::put('update/{id}',[ProfileController::class, 'update'])->name('update');
+    });
+        
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+    Route::middleware('isAdmin')->group(function () {
+        Route::prefix('admin')->name('admin.')->group(function () {
+
+            Route::prefix('service')->name('service.')->group(function () {
+                Route::get('index',[ServiceController::class, 'index'])->name('index');
+                Route::get('create',[ServiceController::class, 'create'])->name('create');
+                Route::post('store',[ServiceController::class, 'store'])->name('store');
+                Route::get('edit/{id}',[ServiceController::class, 'edit'])->name('edit');
+                Route::put('update/{id}',[ServiceController::class, 'update'])->name('update');
+            });
+            Route::prefix('portfolio')->name('portfolio.')->group(function () {
+                Route::get('index',[PortfolioController::class, 'index'])->name('index');
+                Route::get('create',[PortfolioController::class, 'create'])->name('create');
+                Route::get('edit/{id}',[PortfolioController::class, 'edit'])->name('edit');
+                Route::put('update/{id}',[PortfolioController::class, 'update'])->name('update');
+            });
+            Route::prefix('blog')->name('blog.')->group(function () {
+                Route::get('index',[BlogController::class, 'index'])->name('index');
+                Route::get('create',[BlogController::class, 'create'])->name('create');
+                Route::get('show/{id}',[BlogController::class, 'show'])->name('show');
+                Route::get('edit/{id}',[BlogController::class, 'edit'])->name('edit');
+                Route::put('update/{id}',[BlogController::class, 'update'])->name('update');
+            });
+            Route::prefix('equipe')->name('equipe.')->group(function () {
+                Route::get('index',[EquipeController::class, 'index'])->name('index');
+                Route::get('create',[EquipeController::class, 'create'])->name('create');
+                Route::get('edit/{id}',[EquipeController::class, 'edit'])->name('edit');
+                Route::put('update/{id}',[EquipeController::class, 'update'])->name('update');
+            });
+            Route::prefix('devis')->name('devis.')->group(function () {
+                Route::get('index',[DevisController::class, 'index'])->name('index');
+                Route::get('create',[DevisController::class, 'create'])->name('create');
+                Route::get('edit/{id}',[DevisController::class, 'edit'])->name('edit');
+                Route::put('update/{id}',[DevisController::class, 'update'])->name('update');
+            });
+            Route::get('settings', [AdminController::class, 'settings'])->name('settings');
+            Route::get('apparence', [AdminController::class, 'apparence'])->name('apparence');
+
+            Route::get('profile', [AdminController::class, 'profile'])->name('profile');
+            Route::put('update', [AdminController::class, 'update'])->name('update');
+
+        });
+    });
+    Route::middleware('isClient')->group(function () {
+        Route::prefix('client')->name('client.')->group(function () {
+            Route::get('profile', [ProfileController::class, 'profile'])->name('profile');
+           
+        });
+    });
+
+    
+});

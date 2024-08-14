@@ -1,178 +1,104 @@
-<footer class="section-footer footer-1 bg-secondary" data-bs-theme="dark">
-    <div class="container">
-        <div class="footer-wrapper pt-60 pb-5 pt-lg-100 pb-lg-90">
-            <div class="row gx-40 gy-5 justify-content-lg-between">
-
-                <div class="col-md-5 col-lg-5 col-xl-3">
-                    <div class="logo-footer mb-20 mb-xl-30">
-                        <a class="navbar-brand py-0" href="index.html">
-                            <span class="logo">
-                                <img src="{{asset('assets/images/logo-white.png')}}" class="img-fluid" alt="logo-white">							
-                            </span>						
-                        </a>
-                    </div>
-                    <!-- logo-footer -->
-
-                    <ul class="list-unstyled mb-0 d-flex flex-column gap-10">
-                        <li class="d-flex gap-3 align-items-center">
-                            <span class="contact-icon mail-icon">											
-                                <svg width="20" height="20"><use xlink:href="#mail-icon"></use></svg> 
-                            </span>											
-                            <p class="mb-0"><a href="mailto:info@logistics.com" class="text-decoration-none link-hover-animation-2">info@logistics.com</a></p>
-                        </li>
-                        <li class="d-flex gap-3 align-items-center">
-                            <span class="contact-icon location-icon">											
-                                <svg width="24" height="24"><use xlink:href="#location-icon"></use></svg> 
-                            </span>											
-                            <p class="mb-0"><a id="mapDirectionBtn" href="#" class="text-decoration-none link-hover-animation-2" data-bs-toggle="modal" data-bs-target="#RoutingMapModal">265 New Ave, Califonia City-1001, USA.</a></p>
-                        </li>
-                        <li class="d-flex gap-3 align-items-center">
-                            <span class="contact-icon phone-icon">											
-                                <svg width="20" height="20"><use xlink:href="#phone-icon"></use></svg> 
-                            </span>
-                            <p class="mb-0"><a href="tel:(+0123)234556789" class="text-decoration-none link-hover-animation-2">(+0123) 2345 56789</a></p>
-                        </li>											
-                    </ul>
-
-                    
-                </div>
-                <!-- col-4 -->
-
-                <div class="col-md-3 col-lg-3 col-xl-2">
-                    <div class="d-flex justify-content-md-center justify-content-xxl-end">
-                        <div class="d-flex flex-column gap-20 gap-lg-30">
-                            <h5 class="mb-0">Our Service</h5>
-                            <ul class="list-unstyled mb-0 d-flex flex-column gap-10">
-                                <li class="d-flex gap-10 align-items-center">
-                                    <span class="chevron-right-icon">											
-                                        <svg width="9" height="14"><use xlink:href="#chevron-right-icon"></use></svg> 
-                                    </span>
-                                    <a href="service-single-3.html" class="text-decoration-none link-hover-animation-1">Sea Transport</a>
-                                </li>
-                                <li class="d-flex gap-10 align-items-center">
-                                    <span class="chevron-right-icon">											
-                                        <svg width="9" height="14"><use xlink:href="#chevron-right-icon"></use></svg> 
-                                    </span>
-                                    <a href="service-single-2.html" class="text-decoration-none link-hover-animation-1">Warehouse</a>
-                                </li>
-                                <li class="d-flex gap-10 align-items-center">
-                                    <span class="chevron-right-icon">											
-                                        <svg width="9" height="14"><use xlink:href="#chevron-right-icon"></use></svg> 
-                                    </span>
-                                    <a href="service-single-1.html" class="text-decoration-none link-hover-animation-1">Air Fright</a>
-                                </li>										
-                                <li class="d-flex gap-10 align-items-center">
-                                    <span class="chevron-right-icon">											
-                                        <svg width="9" height="14"><use xlink:href="#chevron-right-icon"></use></svg> 
-                                    </span>
-                                    <a href="service-single-1.html" class="text-decoration-none link-hover-animation-1">Local Shipping</a>
-                                </li>
-                            </ul>
-                        </div>	
-                    </div>
-                                                
-                </div>
-                <!-- col-2 -->
-
-                <div class="col-md-4 col-lg-3 col-xxl-2">
-                    <div class="d-flex justify-content-md-end justify-content-xl-center justify-content-xxl-end">
-                        <div class="d-flex flex-column gap-20 gap-lg-30">
-                            <h5 class="mb-0">Our Company</h5>
-                            <ul class="list-unstyled mb-0 d-flex flex-column gap-10">
-                                <li class="d-flex gap-10 align-items-center">
-                                    <span class="chevron-right-icon">											
-                                        <svg width="9" height="14"><use xlink:href="#chevron-right-icon"></use></svg> 
-                                    </span>
-                                    <a href="about-us.html" class="text-decoration-none link-hover-animation-1">About Us</a>
-                                </li>
-                                <li class="d-flex gap-10 align-items-center">
-                                    <span class="chevron-right-icon">											
-                                        <svg width="9" height="14"><use xlink:href="#chevron-right-icon"></use></svg> 
-                                    </span>
-                                    <a href="project.html" class="text-decoration-none link-hover-animation-1">Our Project</a>
-                                </li>
-                                <li class="d-flex gap-10 align-items-center">
-                                    <span class="chevron-right-icon">											
-                                        <svg width="9" height="14"><use xlink:href="#chevron-right-icon"></use></svg> 
-                                    </span>
-                                    <a href="pricing.html" class="text-decoration-none link-hover-animation-1">Pricing</a>
-                                </li>										
-                                <li class="d-flex gap-10 align-items-center">
-                                    <span class="chevron-right-icon">											
-                                        <svg width="9" height="14"><use xlink:href="#chevron-right-icon"></use></svg> 
-                                    </span>
-                                    <a href="contact-us.html" class="text-decoration-none link-hover-animation-1">Contact</a>
-                                </li>
+<footer class="footer cmt-bgcolor-darkgrey widget-footer clearfix">
+    <div class="first-footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 col-md-4 col-sm-6 widget-area">
+                    <div class="widget widget_social">
+                        <div class="social-icons circle">
+                            <ul class="list-inline">
+                                <li><a class="tooltip-bottom" target="_blank" href="#" data-tooltip="Facebook"><i class="ti ti-facebook"></i></a></li>
+                                <li><a class="tooltip-bottom" target="_blank" href="#" data-tooltip="Twitter"><i class="ti ti-twitter-alt"></i></a></li>
+                                <li><a class="tooltip-bottom" target="_blank" href="#" data-tooltip="Flickr"><i class="fa fa-flickr"></i></a></li>
+                                <li><a class="tooltip-bottom" target="_blank" href="#" data-tooltip="Vimeo"><i class="fa fa-vimeo"></i></a></li>
+                                <li><a class="tooltip-bottom" target="_blank" href="#" data-tooltip="Instagram"><i class="fa fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>
-                                                    
                 </div>
-                <!-- col-2 -->
-
-                <div class="col-md-6 col-lg-5 col-xl-4 col-xxl-4 d-flex justify-content-end">								
-                    <div class="footer-subscription d-flex flex-column gap-20 gap-lg-30">
-                        <h5 class="mb-0">Stay in touch</h5>
-                        <p class="mb-0 body-color-style-1">They've become  informed passionate thanks opportunities provided by organization.</p>
-
-                        <form id="subscriptionForm" class="contact-form row mb-10" data-bs-theme="light">		
-                            <div class="col-12">
-                                <div class="footer-form-wrapper position-relative">
-                                    <input type="email" class="form-control" id="InputEmail" name="InputEmail" placeholder="Email address" required>
-                                     
-                                    <button class="arrow-icon-wrapper" type="submit" aria-label="submit-button">
-                                        <span class="arrow-icon-2">											
-                                            <svg width="18" height="18"><use xlink:href="#arrow-icon-2"></use></svg> 
-                                        </span>
-                                    </button>
-                                </div>											
-                            </div>									  
-                        </form>	
-                        
-                        <div class="d-flex gap-20 social-icons text-white">
-                            <a href="#" class="text-decoration-none" aria-label="social-icon">
-                                <span class="facebook-icon">											
-                                    <svg width="9" height="17"><use xlink:href="#facebook-icon"></use></svg> 
-                                </span>
-                            </a>
-                            <a href="#" class="text-decoration-none" aria-label="social-icon">
-                                <span class="twitter-icon">											
-                                    <svg width="19" height="15"><use xlink:href="#twitter-icon"></use></svg> 
-                                </span>
-                            </a>									
-                            <a href="#" class="text-decoration-none" aria-label="social-icon">
-                                <span class="linkedin-icon">											
-                                    <svg width="17" height="15"><use xlink:href="#linkedin-icon"></use></svg> 
-                                </span>
-                            </a>	
-                            <a href="#" class="text-decoration-none" aria-label="social-icon">
-                                <span class="instagram-icon-3">											
-                                    <svg width="18" height="18"><use xlink:href="#instagram-icon-3"></use></svg> 
-                                </span>
-                            </a>								
-                        </div>	
-                        <!-- social-icons -->
-                        <!-- subscriptionForm -->	
-                                                        
+                <div class="col-lg-5 col-md-5 col-sm-6 widget-area">
+                    <div class="widget widget_nav_menu">                  
+                        <ul class="footer-nav-menu">                  
+                            <li><a href="about.html">Setting &amp; Privacy</a></li>
+                            <li><a href="https://cymolthemes.com/html/mrhandy/electrician/services-1">Teams Of Use</a></li>
+                            <li><a href="contact-us.html">Site Map</a></li>
+                        </ul>
                     </div>
-                    <!-- d-flex -->
                 </div>
-                <!-- col-3 -->
+                <div class="col-lg-3 col-md-3 widget-area">
+                    <div class="widget widget_logo">
+                        <div class="footer-logo">
+                            <img id="footer-logo-img" class="img-fluid" src="{{asset('images/footer-logo.svg')}}" alt="footer_logo">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- row -->
         </div>
-        <!-- footer-wrapper -->
     </div>
-    <!-- container -->
-
-    <div class="footer-separator"></div>
-
-    <div class="container">
-        <div class="copyright py-30 py-lg-40 d-flex flex-column flex-md-row gap-3 justify-content-between">						
-            <p class="mb-0 copyright-text">&copy; 2025, Logistip. All Rights Reserved</p>
-            <div class="d-flex gap-4">
-                <a href="#" class="text-decoration-none link-hover-animation-1 copyright-text" aria-label="Privacy">Privacy Policy</a>
-                <a href="#" class="text-decoration-none link-hover-animation-1 copyright-text" aria-label="Terms">Terms & Conditions</a>
+    <div class="second-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 widget-area">
+                    <div class="widget widget_text">
+                        <h3 class="widget-title">About Company</h3>
+                        <p>MrHandy is your one-call solution for a wide range of maintenance and repair needs. We are fully insured professional team job right. We arearrive on time in uniform.</p>
+                        <a class="cmt-btn cmt-btn-size-sm cmt-btn-color-skincolor btn-inline cmt-icon-btn-right" href="#">More About<i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 widget-area">
+                    <div class="widget widget_quick_links">
+                       <h3 class="widget-title">Quick Link</h3>
+                        <ul class="menu-footer-quick-links">
+                            <li><a href="about.html">About Mr Handy</a></li>
+                            <li><a href="project-style-01.html">Latest Projects</a></li>
+                            <li><a href="residential-project.html">Smoke Detectors</a></li>
+                            <li><a href="switchboard-upgrade.html">Code Compliance</a></li>
+                            <li><a href="industrial-electrician.html">Circuits & Wiring</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 widget-area">
+                    <div class="widget widget_post clearfix">
+                        <h3 class="widget-title">Latest News</h3>
+                        <ul class="cmt-recent-post-list">
+                            <li>
+                                <a href="https://cymolthemes.com/html/mrhandy/electrician/single-blog.html"><img src="{{asset('images/blog/01.jpg')}}" alt="post-img"></a>
+                                <div class="post-detail">
+                                    <a href="https://cymolthemes.com/html/mrhandy/electrician/single-blog.html">Why Breaker Box Outside House</a>
+                                    <span class="post-date"><i class="fa fa-calendar"></i>November 20, 2020</span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="https://cymolthemes.com/html/mrhandy/electrician/single-blog.html"><img src="{{asset('images/blog/02.jpg')}}" alt="post-img"></a>
+                                <div class="post-detail">
+                                    <a href="https://cymolthemes.com/html/mrhandy/electrician/single-blog.html">How Standard Light Switch Work</a>
+                                    <span class="post-date"><i class="fa fa-calendar"></i>November 15, 2020</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 widget-area">
+                    <div class="widget widget_contact">
+                        <h3 class="widget-title">Contact Us</h3>      
+                        <ul class="widget_contact_wrapper">
+                            <li><i class="fa fa-map-marker"></i>1058 Meadowb, Mall Road</li>
+                            <li><i class="fa fa-envelope-o"></i><a href="mailto:support@gmail.com" target="_blank">support@gmail.com</a></li>
+                            <li><i class="fa fa-phone"></i>+000 (123) 44 558</li>
+                            <li><i class="fa fa-paper-plane-o"></i><a href="#" target="_blank">www.mrhandy.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-footer-text">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">                    
+                    <div class="copyright text-center">
+                        <span> Copyright © 2020 <a href="#">Electrician</a>. All rights reserved. Powered By <a href="https://cymolthemes.com/" target="_blank" rel="noopener">Cymolthemes</a></span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
