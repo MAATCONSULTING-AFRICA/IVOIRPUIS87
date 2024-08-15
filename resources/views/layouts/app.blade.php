@@ -84,7 +84,7 @@
     <script src="{{asset('js/circle-progress.min.js')}}"></script>
     <script src="{{asset('js/main.js')}}"></script>
 
-
+    <script src="{{asset('js/map.js')}}"></script>
     <!-- Revolution Slider -->    
     <script src="{{asset('revolution/js/slider.js')}}"></script>
 

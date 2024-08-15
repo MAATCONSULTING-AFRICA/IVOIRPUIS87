@@ -27,6 +27,12 @@ Route::get('/gestion-immobiliere', [HomeController::class, 'gestionImmobiliere']
 Route::get('/construction-metallique', [HomeController::class, 'constructionMetallique'])->name('construction-metallique');
 Route::get('/entretien-nettoyage', [HomeController::class, 'entretienNettoyage'])->name('entretien-nettoyage');
 Route::get('/service/detail/{id}', [HomeController::class, 'serviceDetail'])->name('service.detail');
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+Route::get('/portefeuille', [HomeController::class, 'portefeuille'])->name('portefeuille');
+Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
+Route::get('/demande/devis', [HomeController::class, 'demandeDevis'])->name('demande_devis');
+Route::get('/blog/detail/{id}', [HomeController::class, 'blogDetail'])->name('blog.detail');
+Route::get('/portefeuile/detail/{id}', [HomeController::class, 'portfolioDetail'])->name('portfolio_detail');
 
 Route::middleware(['auth'])->group(function () {
     Route::prefix('profil')->name('profil.')->group(function () {
@@ -51,6 +57,7 @@ Route::middleware(['auth'])->group(function () {
             Route::prefix('portfolio')->name('portfolio.')->group(function () {
                 Route::get('index',[PortfolioController::class, 'index'])->name('index');
                 Route::get('create',[PortfolioController::class, 'create'])->name('create');
+                Route::get('store',[PortfolioController::class, 'store'])->name('store');
                 Route::get('edit/{id}',[PortfolioController::class, 'edit'])->name('edit');
                 Route::put('update/{id}',[PortfolioController::class, 'update'])->name('update');
             });

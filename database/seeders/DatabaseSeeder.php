@@ -10,6 +10,7 @@ use Database\Seeders\PostSeeder;
 use Database\Seeders\UserSeeder;
 use Database\Seeders\ServiceSeeder;
 use Database\Seeders\CategorySeeder;
+use Database\Seeders\PortfolioSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -25,6 +26,7 @@ class DatabaseSeeder extends Seeder
             PostSeeder::class,
             LikeSeeder::class,
             ServiceSeeder::class,
+            PortfolioSeeder::class,
         ]);
     }
 }

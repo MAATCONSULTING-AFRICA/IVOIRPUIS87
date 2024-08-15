@@ -18,16 +18,16 @@
                 <div class="col-lg-5 col-md-5 col-sm-6 widget-area">
                     <div class="widget widget_nav_menu">                  
                         <ul class="footer-nav-menu">                  
-                            <li><a href="about.html">Setting &amp; Privacy</a></li>
-                            <li><a href="https://cymolthemes.com/html/mrhandy/electrician/services-1">Teams Of Use</a></li>
-                            <li><a href="contact-us.html">Site Map</a></li>
+                            <li><a href="#">Paramètres et confidentialité</a></li>
+                            <li><a href="#">Conditions d'utilisation</a></li>
+                            <li><a href="#">Localisation</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 widget-area">
                     <div class="widget widget_logo">
                         <div class="footer-logo">
-                            <img id="footer-logo-img" class="img-fluid" src="{{asset('images/footer-logo.svg')}}" alt="footer_logo">
+                            <img id="footer-logo-img" class="img-fluid" src="{{asset('images/logo.png')}}" alt="footer_logo">
                         </div>
                     </div>
                 </div>
@@ -39,52 +39,48 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 widget-area">
                     <div class="widget widget_text">
-                        <h3 class="widget-title">About Company</h3>
-                        <p>MrHandy is your one-call solution for a wide range of maintenance and repair needs. We are fully insured professional team job right. We arearrive on time in uniform.</p>
-                        <a class="cmt-btn cmt-btn-size-sm cmt-btn-color-skincolor btn-inline cmt-icon-btn-right" href="#">More About<i class="fa fa-arrow-circle-right"></i></a>
+                        <h3 class="widget-title">Apropos IP87</h3>
+                        <p>IVOIR PUISSANCE 87 est une entreprise spécialisée dans les domaines suivants : le BTP, le Lotissement, la Gestion immobilière, l'Imprimerie, la Construction métallique, l'Entretien et le Nettoyage, les Arts - aménagement et divers.</p>
+                        <a class="cmt-btn cmt-btn-size-sm cmt-btn-color-skincolor btn-inline cmt-icon-btn-right" href="#">Plus d'informations<i class="fa fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 widget-area">
                     <div class="widget widget_quick_links">
-                       <h3 class="widget-title">Quick Link</h3>
+                       <h3 class="widget-title">Liens utiles</h3>
                         <ul class="menu-footer-quick-links">
-                            <li><a href="about.html">About Mr Handy</a></li>
-                            <li><a href="project-style-01.html">Latest Projects</a></li>
-                            <li><a href="residential-project.html">Smoke Detectors</a></li>
-                            <li><a href="switchboard-upgrade.html">Code Compliance</a></li>
-                            <li><a href="industrial-electrician.html">Circuits & Wiring</a></li>
+                            <li> <a href="{{route('home')}}">Accueil</a></li>
+                            <li> <a href="{{route('blog')}}">Blog</a></li>
+                            <li> <a href="{{route('portefeuille')}}">Portefeuille projets</a></li>
+                            <li> <a href="{{route('contact')}}">Contact</a></li>
+                            <li> <a href="{{route('demande_devis')}}">Demande dévis</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 widget-area">
                     <div class="widget widget_post clearfix">
-                        <h3 class="widget-title">Latest News</h3>
+                        <h3 class="widget-title">Blog/Actualités</h3>
                         <ul class="cmt-recent-post-list">
+                            @foreach($recent_blogs as $item)
                             <li>
-                                <a href="https://cymolthemes.com/html/mrhandy/electrician/single-blog.html"><img src="{{asset('images/blog/01.jpg')}}" alt="post-img"></a>
+                                <a href="{{route('blog.detail', $item->id)}}"><img src="{{$item->image ? asset($item->image) : '' }}" alt="{{$item->title}}"></a>
                                 <div class="post-detail">
-                                    <a href="https://cymolthemes.com/html/mrhandy/electrician/single-blog.html">Why Breaker Box Outside House</a>
-                                    <span class="post-date"><i class="fa fa-calendar"></i>November 20, 2020</span>
+                                    <a href="{{route('blog.detail', $item->id)}}">{{$item->title}}</a>
+                                    <span class="post-date"><i class="fa fa-calendar"></i>{{ $item->created_at->format('M d Y') }}</span>
                                 </div>
                             </li>
-                            <li>
-                                <a href="https://cymolthemes.com/html/mrhandy/electrician/single-blog.html"><img src="{{asset('images/blog/02.jpg')}}" alt="post-img"></a>
-                                <div class="post-detail">
-                                    <a href="https://cymolthemes.com/html/mrhandy/electrician/single-blog.html">How Standard Light Switch Work</a>
-                                    <span class="post-date"><i class="fa fa-calendar"></i>November 15, 2020</span>
-                                </div>
-                            </li>
+                            @endforeach
+                            
                         </ul>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 widget-area">
                     <div class="widget widget_contact">
-                        <h3 class="widget-title">Contact Us</h3>      
+                        <h3 class="widget-title">Contact</h3>      
                         <ul class="widget_contact_wrapper">
-                            <li><i class="fa fa-map-marker"></i>1058 Meadowb, Mall Road</li>
-                            <li><i class="fa fa-envelope-o"></i><a href="mailto:support@gmail.com" target="_blank">support@gmail.com</a></li>
-                            <li><i class="fa fa-phone"></i>+000 (123) 44 558</li>
-                            <li><i class="fa fa-paper-plane-o"></i><a href="#" target="_blank">www.mrhandy.com</a></li>
+                            <li><i class="fa fa-map-marker"></i>Cocody Riviera Palmeraie, Cocody, Abidjan, Côte d'Ivoire</li>
+                            <li><i class="fa fa-envelope-o"></i><a href="mailto:kyliansoro@gmail.com" target="_blank">kyliansoro@gmail.com</a></li>
+                            <li><i class="fa fa-phone"></i>+225 07 79 24 02 68</li>
+                            <li><i class="fa fa-paper-plane-o"></i><a href="#" target="_blank">www.ivoirpuissance87.com</a></li>
                         </ul>
                     </div>
                 </div>
@@ -96,7 +92,7 @@
             <div class="row">
                 <div class="col-md-12">                    
                     <div class="copyright text-center">
-                        <span> Copyright © 2020 <a href="#">Electrician</a>. All rights reserved. Powered By <a href="https://cymolthemes.com/" target="_blank" rel="noopener">Cymolthemes</a></span>
+                        <span> Copyright © 2024 <a href="#">Ivoir Puissance 87</a>. Tous droits réservés.</span>
                     </div>
                 </div>
             </div>

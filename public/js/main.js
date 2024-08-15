@@ -365,12 +365,7 @@
 
     });
      $(document).ready(function() {
-    var e = '<div class="cmt_floting_customsett">'+
-                '<a href="https://support.cymolthemes.com/" class="tmtheme_fbar_icons"><i class="fa fa-headphones"></i><span>Support</span></a>'+
-                '<a href="https://www.cymolthemes.com/" class="tmtheme_fbar_icons"><i class="themifyicon themifyicon ti-pencil"></i><span>Customization</span></a>'+
-                '<a href="https://1.envato.market/ZPjVQ" class="tmtheme_fbar_icons"><i class="themifyicon ti-shopping-cart"></i><span class="buy_link">Buy<span></span></span></a>'+
-                '<div class="clearfix"></div>'+
-            '</div>';
+    var e = '';
 
     $('body').append(e);
 });

@@ -15,7 +15,18 @@
                       <div class="top_bar_contact_item">
                           <div class="top_bar_icon"><i class="fa fa-clock-o"></i></div>Lundi-Vendredi: 08:00-17:30
                       </div>
-                      
+                      <div class="top_bar_contact_item ml-auto">
+                        <a href="#">Blogs/Actualités</a>
+                        </div>
+                        <div class="top_bar_contact_item">
+                            <a href="#">Services</a>
+                        </div>
+                        <div class="top_bar_contact_item">
+                            <a href="#">Portefeuille</a>
+                        </div>
+                        <div class="top_bar_contact_item">
+                            <a href="#">Contact</a>
+                        </div>
                       <div class="top_bar_contact_item top_bar_social mr_10 text-end">
                           <ul class="social-icons d-flex">
                               <li><a href="https://www.facebook.com/profile.php?id=61550845094511"><i class="fa fa-facebook"></i></a></li>
@@ -54,7 +65,7 @@
                           <nav class="main-menu menu-mobile" id="menu">
                               <ul class="menu">
                                   <li class="mega-menu-item active">
-                                      <a href="#">Accueil</a>
+                                      <a href="{{route('home')}}">Accueil</a>
                                       
                                   </li>
                                  
@@ -67,15 +78,15 @@
                                       </ul>
                                   </li>
                                   <li class="mega-menu-item">
-                                      <a href="#">Portfolio/Projets réalisés</a>
+                                      <a href="{{route('portefeuille')}}">Portefeuille Projets</a>
                                       
                                   </li>
                                   <li class="mega-menu-item">
-                                      <a href="#">Blog/Actualités</a>
+                                      <a href="{{route('blog')}}">Blog/Actualités</a>
                                       
                                   </li>
                                   <li class="mega-menu-item">
-                                      <a href="#">Contact</a>
+                                      <a href="{{route('contact')}}">Contact</a>
                                       
                                   </li>
                               </ul>
@@ -94,7 +105,7 @@
                                   </div>
                               </div>
                               <div class="header_btn mr_50">
-                                  <a class="cmt-btn cmt-btn-size-md cmt-btn-shape-square cmt-btn-style-fill cmt-icon-btn-right cmt-btn-color-skincolor" href="#">DEMANDER UN DEVIS<i class="fa fa-arrow-circle-right"></i></a>
+                                  <a class="cmt-btn cmt-btn-size-md cmt-btn-shape-square cmt-btn-style-fill cmt-icon-btn-right cmt-btn-color-skincolor" href="{{route('demande_devis')}}">DEMANDER UN DEVIS<i class="fa fa-arrow-circle-right"></i></a>
                               </div>
                           </div>
                       </div><!-- site-navigation end-->

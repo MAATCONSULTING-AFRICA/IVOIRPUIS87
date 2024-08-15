@@ -45,7 +45,7 @@
                 @foreach($posts as $post)
                 <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 mb-4 post-item">
                     <a href="{{route('admin.blog.show', $post->id)}}" class="card style-2 mb-md-0 mb-4">
-                        <img src="{{$post->image}}" class="card-img-top" alt="{{$post->title}}">
+                        <img src="{{$post->image ? asset($post->image) : '' }}" class="card-img-top" alt="{{$post->title}}">
                         <div class="card-body px-0 pb-0">
                             <h5 class="card-title mb-3 post-title">{{$post->title}}</h5>
                             <div class="media mt-4 mb-0 pt-1">

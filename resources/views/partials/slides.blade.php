@@ -16,7 +16,7 @@
                         data-frame_1="st:220;sp:900;sR:220;"
                         data-frame_999="o:0;st:w;sR:7880;"
                         style="z-index:9;font-family:Jost;text-transform:uppercase;"
-                    >Quality work 
+                    >Un travail de qualité 
                     </rs-layer><!--
 
                     --><rs-layer
@@ -30,13 +30,13 @@
                         data-frame_1="st:390;sp:900;sR:390;"
                         data-frame_999="o:0;st:w;sR:7710;"
                         style="z-index:10;font-family:Jost;text-transform:uppercase;"
-                    >& Competitive 
+                    >avec un tarif 
                     </rs-layer><!--
 
                     --><a
                         id="slider-2-slide-2-layer-4" 
                         class="rs-layer cmt-btn cmt-btn-size-md cmt-btn-shape-square cmt-btn-style-fill cmt-icon-btn-right cmt-btn-color-white"
-                        href="about.html" target="_self" rel="nofollow"
+                        href="{{route('demande_devis')}}" target="_self" rel="nofollow"
                         data-type="text"
                         data-color="#ff4c01"
                         data-rsp_ch="on"
@@ -48,7 +48,7 @@
                         data-frame_999="o:0;st:w;sR:7590;"
                         data-frame_hover="c:#fff;bor:0px,0px,0px,0px;bos:none;"
                         style="z-index:13;background-color:#ffffff;font-family:Jost;"
-                    >LEARN MORE <i class="fa fa-arrow-circle-right"></i> 
+                    >DEMANDER UN DEVIS<i class="fa fa-arrow-circle-right"></i> 
                     </a><!--
 
                     --><rs-layer
@@ -62,7 +62,7 @@
                         data-frame_1="st:520;sp:900;sR:520;"
                         data-frame_999="o:0;st:w;sR:7580;"
                         style="z-index:11;font-family:Jost;text-transform:uppercase;"
-                    >Price. 
+                    >Compétitive. 
                     </rs-layer><!--
 
                     --><rs-layer
@@ -77,7 +77,7 @@
                         data-frame_1="st:800;sp:500;sR:800;"
                         data-frame_999="o:0;st:w;sR:7700;"
                         style="z-index:12;font-family:Jost;"
-                    >Our power of choice is untrammelled and when nothing being<br /> able to do what we like best with Mrhandy.  
+                    >Nous offrons une gamme complète de services pour répondre à tous vos besoins <br /> Vous avez un projet de construction ?  
                     </rs-layer><!--
 
                     --><rs-layer
@@ -94,7 +94,7 @@
                         data-frame_1="e:power2.inOut;st:130;sp:500;sR:130;"
                         data-frame_999="o:0;st:w;sR:8370;"
                         style="z-index:8;font-family:Open Sans;text-transform:uppercase;"
-                    >POWER 
+                    >IP87 
                     </rs-layer><!--
 
          --></rs-slide>
@@ -114,7 +114,7 @@
                     data-frame_1="st:220;sp:900;sR:220;"
                     data-frame_999="o:0;st:w;sR:7880;"
                     style="z-index:9;font-family:Jost;text-transform:uppercase;"
-                >Need it fixed? 
+                >Vous souhaitez   
                 </rs-layer><!--
 
                 --><rs-layer
@@ -128,13 +128,13 @@
                     data-frame_1="st:390;sp:900;sR:390;"
                     data-frame_999="o:0;st:w;sR:7710;"
                     style="z-index:10;font-family:Jost;text-transform:uppercase;"
-                >we care to 
+                >construire 
                 </rs-layer><!--
 
                 --><a
                     id="slider-2-slide-4-layer-4" 
                     class="rs-layer cmt-btn cmt-btn-size-md cmt-btn-shape-square cmt-btn-style-fill cmt-icon-btn-right cmt-btn-color-white"
-                    href="about.html" target="_self" rel="nofollow"
+                    href="{{route('contact')}}" target="_self" rel="nofollow"
                     data-type="text"
                     data-color="#ff4c01"
                     data-rsp_ch="on"
@@ -146,7 +146,7 @@
                     data-frame_999="o:0;st:w;sR:7590;"
                     data-frame_hover="c:#fff;bor:0px,0px,0px,0px;bos:none;"
                     style="z-index:13;background-color:#ffffff;font-family:Jost;"
-                >LEARN MORE <i class="fa fa-arrow-circle-right"></i> 
+                >Contactez-nous <i class="fa fa-arrow-circle-right"></i> 
                 </a><!--
 
                 --><rs-layer
@@ -160,7 +160,7 @@
                     data-frame_1="st:520;sp:900;sR:520;"
                     data-frame_999="o:0;st:w;sR:7580;"
                     style="z-index:11;font-family:Jost;text-transform:uppercase;"
-                >fix it right. 
+                >une maison ou une école ?
                 </rs-layer><!--
 
                 --><rs-layer
@@ -175,7 +175,9 @@
                     data-frame_1="st:800;sp:500;sR:800;"
                     data-frame_999="o:0;st:w;sR:7700;"
                     style="z-index:12;font-family:Jost;"
-                >Our power of choice is untrammelled and when nothing being<br />able to do what we like best with Mrhandy.  
+                >Nous nettoyons vos chantiers, vos bureaux, immeuble et bien d'autres.<br />IVOIR PUISSANCE 87 est une entreprise spécialisée dans les domaines suivants : <br/>
+                le BTP, le Lotissement, la Gestion immobilière, l'Imprimerie, la Construction métallique, l'Entretien et le Nettoyage, les Arts - aménagement et divers. <br/> 
+                
                 </rs-layer><!--
 
                 --><rs-layer
@@ -192,7 +194,7 @@
                     data-frame_1="e:power2.inOut;st:130;sp:500;sR:130;"
                     data-frame_999="o:0;st:w;sR:8370;"
                     style="z-index:8;font-family:Open Sans;text-transform:uppercase;"
-                >POWER 
+                >Aménagement 
                 </rs-layer><!--
          --></rs-slide>
         </rs-slides>

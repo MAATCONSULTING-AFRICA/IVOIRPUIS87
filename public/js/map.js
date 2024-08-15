@@ -9,7 +9,7 @@ $(document).ready(function()
 
 	function initGoogleMap()
 	{
-		var myLatlng = new google.maps.LatLng(40.7127753, -74.0059728);
+		var myLatlng = new google.maps.LatLng(5.3715639, -3.9942551);
     	var mapOptions = 
     	{
     		center: myLatlng,
@@ -212,7 +212,7 @@ $(document).ready(function()
     	map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
     	// Use an image for a marker
-		var image = 'images/location.png';
+		var image = "{{asset('images/location.png')}}";
 		var marker = new google.maps.Marker(
 		{
 			position: myLatlng,

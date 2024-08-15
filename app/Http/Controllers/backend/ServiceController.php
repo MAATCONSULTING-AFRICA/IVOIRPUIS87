@@ -67,8 +67,8 @@ class ServiceController extends Controller
         if($request->hasFile('image')){
             $image = $request->file('image');
             $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
-            Image::make($image)->resize(2879,1363)->save('upload/services/'.$name_gen);
-            $save_url = 'upload/services/'.$name_gen; 
+            Image::make($image)->resize(2879,1363)->save('services/'.$name_gen);
+            $save_url = 'services/'.$name_gen; 
         }
         $service->update([
             'name' => $request->name,
