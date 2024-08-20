@@ -31,7 +31,7 @@
                         <div class="cmt-blog-classic-content">
                             <div class="cmt-post-entry-header">
                                 <div class="post-meta">
-                                    <span class="cmt-meta-line byline"><img src="{{ $post->user->profile_image ?? asset('assets/images/default_user.jpeg') }}" class="img-fluid" alt="{{ $post->user->name ?? null}}">{{ $post->user->name ?? null}}</span>
+                                    <span class="cmt-meta-line byline"><img src="{{ $post->user->profile_image ?? asset('default_user.png') }}" class="img-fluid" alt="{{ $post->user->name ?? null}}">{{ $post->user->name ?? null}}</span>
                                     <span class="cmt-meta-line tags"><i class="fa fa-tags"></i> 
                                         @foreach($post->tags as $tag)
                                             {{ $tag->name }}

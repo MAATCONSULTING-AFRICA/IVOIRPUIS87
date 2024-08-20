@@ -69,13 +69,13 @@ class PortfolioController extends Controller
         }
 
         $portfolio->update([
-            'title' => $request->titre, 
+            'title' => $request->title, 
             'description' => $request->description,
             'category' => $request->category,
-            'image' => $save_url
+            'image' => $save_url ?? $portfolio->image
         ]);
 
-        return redirect()->route('admin.portfolio.index')->with('success', 'Portfolio supprimé avec succès.');
+        return redirect()->route('admin.portfolio.index')->with('success', 'Projet modifié avec succès.');
     }
 
     public function destroy($id)

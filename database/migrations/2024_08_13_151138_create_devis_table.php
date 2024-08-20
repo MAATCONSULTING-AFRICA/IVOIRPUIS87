@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('devis', function (Blueprint $table) {
             $table->id();
+            $table->string('fullname')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('email')->nullable();
+            $table->integer('service_id')->nullable();
+            $table->longText('comment')->nullable();
+            $table->enum('status', ['Approuvé','En attente', 'Non approuvé'])->default('En attente');
             $table->timestamps();
         });
     }

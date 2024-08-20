@@ -61,7 +61,7 @@ class ServiceController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'nullable|string',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:10240',
         ]);
 
         if($request->hasFile('image')){
@@ -73,7 +73,7 @@ class ServiceController extends Controller
         $service->update([
             'name' => $request->name,
             'description' => $request->description,
-            'image' => $save_url
+            'image' => $save_url ?? $service->image,
         ]);
 
         return redirect()->route('admin.service.index')->with('success', 'Service modifié avec succès.');

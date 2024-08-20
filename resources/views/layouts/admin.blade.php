@@ -34,30 +34,22 @@
     <link href="{{ asset('backend/src/assets/css/light/elements/custom-pagination.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('backend/src/assets/css/dark/elements/custom-pagination.css') }}" rel="stylesheet" type="text/css" />
 
-    <link href="{{ asset('backend/src/plugins/src/filepond/filepond.min.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('backend/src/plugins/src/filepond/FilePondPluginImagePreview.min.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('backend/src/plugins/src/tagify/tagify.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('backend/src/plugins/css/dark/filepond/custom-filepond.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('backend/src/plugins/css/light/filepond/custom-filepond.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('backend/src/plugins/src/sweetalerts2/sweetalerts2.css') }}" rel="stylesheet" type="text/css" />
 
-    <link href="{{ asset('backend/src/plugins/css/dark/tagify/custom-tagify.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('backend/src/plugins/css/light/tagify/custom-tagify.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('backend/src/plugins/css/dark/editors/quill/quill.snow.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('backend/src/plugins/css/light/editors/quill/quill.snow.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('backend/src/assets/css/dark/forms/switches.css') }}" rel="stylesheet" type="text/css">
     <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
 
      <!-- BEGIN PAGE LEVEL CUSTOM STYLES -->
-     <link rel="stylesheet" type="text/css" href="{{ asset('backend/src/plugins/src/table/datatable/datatables.css') }}">
+     {{-- <link rel="stylesheet" type="text/css" href="{{ asset('backend/src/plugins/src/table/datatable/datatables.css') }}">
 
      <link rel="stylesheet" type="text/css" href="{{ asset('backend/src/plugins/css/light/table/datatable/dt-global_style.css') }}">
      <link rel="stylesheet" type="text/css" href="{{ asset('backend/src/plugins/css/light/table/datatable/custom_dt_custom.css') }}">
  
      <link rel="stylesheet" type="text/css" href="{{ asset('backend/src/plugins/css/dark/table/datatable/dt-global_style.css') }}">
      <link rel="stylesheet" type="text/css" href="{{ asset('backend/src/plugins/css/dark/table/datatable/custom_dt_custom.css') }}">
- 
+  --}}
      <!-- END PAGE LEVEL CUSTOM STYLES -->
 
+     @stack('css')
 </head>
 <body class="layout-boxed">
     <!-- BEGIN LOADER -->
@@ -99,31 +91,19 @@
     <!-- END MAIN CONTAINER -->
 
     <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+    <script src="{{ asset('backend/src/plugins/src/global/vendors.min.js') }}"></script>
     <script src="{{ asset('backend/src/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('backend/src/plugins/src/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
     <script src="{{ asset('backend/src/plugins/src/mousetrap/mousetrap.min.js') }}"></script>
     <script src="{{ asset('backend/src/plugins/src/waves/waves.min.js') }}"></script>
     <script src="{{ asset('backend/layouts/vertical-dark-menu/app.js') }}"></script>
+    <script src="{{ asset('backend/src/assets/js/custom.js') }}"></script>
     <!-- END GLOBAL MANDATORY SCRIPTS -->
-
-    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
-    <script src="{{ asset('backend/src/plugins/src/apex/apexcharts.min.js') }}"></script>
-    <script src="{{ asset('backend/src/assets/js/dashboard/dash_1.js') }}"></script>
-    <script src="{{ asset('backend/src/plugins/src/table/datatable/datatables.js') }}"></script>
-    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
-
-    <script src="{{ asset('backend/src/plugins/src/editors/quill/quill.js') }}"></script>
-    <script src="{{ asset('backend/src/plugins/src/filepond/filepond.min.js') }}"></script>
-    <script src="{{ asset('backend/src/plugins/src/filepond/FilePondPluginFileValidateType.min.js') }}"></script>
-    <script src="{{ asset('backend/src/plugins/src/filepond/FilePondPluginImageExifOrientation.min.js') }}"></script>
-    <script src="{{ asset('backend/src/plugins/src/filepond/FilePondPluginImagePreview.min.js') }}"></script>
-    <script src="{{ asset('backend/src/plugins/src/filepond/FilePondPluginImageCrop.min.js') }}"></script>
-    <script src="{{ asset('backend/src/plugins/src/filepond/FilePondPluginImageResize.min.js') }}"></script>
-
-    <script src="{{ asset('backend/src/plugins/src/filepond/FilePondPluginImageTransform.min.js') }}"></script>
-    <script src="{{ asset('backend/src/plugins/src/filepond/filepondPluginFileValidateSize.min.js') }}"></script>
+    <script src="{{ asset('backend/src/plugins/src/sweetalerts2/sweetalerts2.min.js') }}"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    @stack('js')
 
     <script>
         @if (session('success'))

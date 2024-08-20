@@ -24,13 +24,14 @@
                             <p class="title-desc">Ce formulaire permet de recueillir vos informations afin de constituer un dévis sur mésure.</p>
                         </div>
                         <!-- section title end -->
-                        <form id="res_quote-form_2" class="res_quote-form wrap-form clearfix" method="post" action="#">
+                        <form id="res_quote-form_2" class="res_quote-form wrap-form clearfix" method="post" action="{{route('store.devis')}}">
+                            @csrf
                             <div class="row">
                                 <div class="col-sm-6 col-md-6">
                                     <label>
                                     <span class="text-input">
                                         <i class="ti-user"></i>
-                                        <input name="name" type="text" class="form-control with-border bg-white" placeholder="Nom & prénom(s)" required="required">
+                                        <input name="fullname" type="text" class="form-control with-border bg-white" placeholder="Nom & prénom(s)" required="required">
                                     </span>
                                     </label>
                                 </div>
@@ -38,7 +39,7 @@
                                     <label>
                                     <span class="text-input">
                                         <i class="ti-mobile"></i>
-                                        <input name="name" type="text" class="form-control with-border bg-white" placeholder="N° téléphone" required="required">
+                                        <input name="phone" type="text" class="form-control with-border bg-white" placeholder="N° téléphone" required="required">
                                     </span>
                                     </label>
                                 </div>
@@ -46,7 +47,7 @@
                                     <label>
                                     <span class="text-input">
                                         <i class="ti-email"></i>
-                                        <input name="phone" type="text" placeholder="Adresse E-mail" required="required" class="form-control with-border bg-white">
+                                        <input name="email" type="text" placeholder="Adresse E-mail" required="required" class="form-control with-border bg-white">
                                     </span>
                                     </label>
                                 </div>                                    
@@ -54,7 +55,7 @@
                                     <label>
                                         <span class="text-input">
                                             <i class="fa fa-check-circle-o"></i>
-                                            <select name="menu-232">
+                                            <select name="service">
                                             <option value="">Selectionner votre service</option>
                                             @foreach($services as $item)
                                                 <option value="{{$item->id}}">{{$item->name}}</option>
@@ -67,14 +68,14 @@
                                     <label>
                                     <span class="text-input">
                                         <i class="ti-comments"></i>
-                                        <textarea name="message" rows="5" placeholder="Informations complémentaires" required="required"></textarea>
+                                        <textarea name="comment" rows="5" placeholder="Informations complémentaires" required="required"></textarea>
                                     </span>
                                     </label>
                                 </div>
-                                <div class="col-sm-6 col-md-6">
+                                <div class="col-sm-8 col-md-8">
                                     <div class="mt-10">
-                                        <a class="cmt-btn cmt-btn-size-md cmt-btn-shape-square cmt-btn-style-fill cmt-icon-btn-right cmt-btn-color-skincolor text-center" href="#">Envoyer le dévis<i class="fa fa-arrow-circle-right"></i>
-                                        </a>
+                                        <button type="submit" class="cmt-btn cmt-btn-size-md cmt-btn-shape-square cmt-btn-style-fill cmt-icon-btn-right cmt-btn-color-skincolor text-center">Envoyer le dévis <i class="fa fa-arrow-circle-right"></i>
+                                        </button>
                                     </div>
                                 </div>
                             </div>

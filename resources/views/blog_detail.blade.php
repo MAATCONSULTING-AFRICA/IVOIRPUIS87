@@ -26,7 +26,7 @@
                        <div class="cmt-blog-single-content">
                            <div class="cmt-post-entry-header">
                                <div class="post-meta">
-                                   <span class="cmt-meta-line byline"><img src="{{ $post->user->profile_image ?? asset('assets/images/default_user.jpeg') }}" class="img-fluid" alt="">{{ $post->user->name }}</span>
+                                   <span class="cmt-meta-line byline"><img src="{{ $post->user->profile_image ?? asset('default_user.png') }}" class="img-fluid" alt="">{{ $post->user->name }}</span>
                                    <span class="cmt-meta-line tags"><i class="fa fa-tags"></i> 
                                         @foreach($post->tags as $tag)
                                             {{ $tag->name }}
@@ -68,7 +68,7 @@
                                                <li class="comment"> 
                                                 <div class="comment-body">
                                                        <div class="comment-author vcard">
-                                                           <img src="{{$post->user->profile_image ?? asset('assets/images/default_user.jpeg') }}" class="avatar" alt="{{ $comment->user->name ?? null}}">
+                                                           <img src="{{$post->user->profile_image ?? asset('default_user.png') }}" class="avatar" alt="{{ $comment->user->name ?? null}}">
                                                        </div>
                                                        <div class="comment-box">
                                                            <div class="comment-meta">

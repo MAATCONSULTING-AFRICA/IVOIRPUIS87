@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tag;
+use App\Models\Post;
+use App\Models\Devis;
+use App\Models\Service;
 use App\Models\Category;
 use App\Models\Portfolio;
-use App\Models\Post;
-use App\Models\Service;
-use App\Models\Tag;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
@@ -37,13 +39,16 @@ class HomeController extends Controller
         ]);
     }
     public function portefeuille(){
-        $portfolios = Portfolio::paginate(6);
+        $portfolios = Portfolio::all();
+        $categories = Portfolio::select('category')->distinct()->get();
         $pagetitle = 'Portefeuille projets ';
         return view('portefeuille', [
             'portfolios' => $portfolios,
+            'categories' => $categories,
             'pagetitle' => $pagetitle,
         ]);
     }
+    
 
     public function serviceDetail($id){
         $service = getServiceById($id);
@@ -86,5 +91,38 @@ class HomeController extends Controller
         return view('demande_devis', [
             'pagetitle' => $pagetitle,
         ]);
+    }
+
+    public function storeDemandeDevis(Request $request){
+
+        $request->validate([
+            'fullname' => 'required|string|max:255',
+            'phone' => 'required|string|max:255',
+            'email' => 'nullable|email',
+            'service' => 'nullable',
+            'comment' => 'nullable', 
+        ]);
+       
+        $devis = Devis::create([
+            'fullname' => $request->fullname,
+            'phone' => $request->phone,
+            'email' => $request->email ?? null,
+            'service_id' => $request->service ?? null,
+            'comment' => $request->comment ?? null,
+        ]);
+
+        if($request->email){
+            Mail::send('email.devis', ['devis' => $devis], function ($message) use ($devis) {
+                $message->to($devis->email); 
+                $message->subject('Demande de devis');
+            });
+        }
+        
+        Mail::send('email.admin.devis', ['devis' => $devis], function ($message) use ($devis) {
+            $message->to("kyliansoro@gmail.com");
+            $message->subject('Demande de devis');
+        });
+
+        return redirect()->back()->with('success', 'Dévis envoyé avec succès.');
     }
 }

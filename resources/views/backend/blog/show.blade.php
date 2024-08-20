@@ -34,7 +34,7 @@
                             <div class="post-meta-info d-flex justify-content-between">
 
                                 <div class="media">
-                                    <img src="{{ $post->user->profile_image ?? asset('assets/images/default_user.jpeg') }}" alt="{{$post->title}}">
+                                    <img src="{{ $post->user->profile_image ?? asset('default_user.png') }}" alt="{{$post->title}}">
                                     <div class="media-body">
                                         <h5>{{ $post->user->name }}</h5>
                                         <p>{{ $post->created_at->format('d M Y') }}</p>
@@ -77,7 +77,7 @@
                                 @if($post->likes && $post->likes->count())
                                     @foreach($post->likes as $like)
                                         <div class="avatar avatar-sm m-0">
-                                            <img alt="avatar" src="{{ $like->user->profile_image ?? asset('assets/images/default_user.jpeg') }}" class="rounded-circle">
+                                            <img alt="avatar" src="{{ $like->user->profile_image ?? asset('default_user.png') }}" class="rounded-circle">
                                         </div>
                                     @endforeach
                                 @else
@@ -95,7 +95,7 @@
                             @foreach($post->comments as $comment)
                             <div class="media mb-5 pb-5 primary-comment">
                                 <div class="avatar me-4">
-                                    <img alt="avatar" src="{{ $comment->user->profile_image ?? asset('assets/images/default_user.jpeg') }}" class="rounded-circle" />
+                                    <img alt="avatar" src="{{ $comment->user->profile_image ?? asset('default_user.png') }}" class="rounded-circle" />
                                 </div>
                                 <div class="media-body">
                                     <h5 class="media-heading mb-1">{{ $comment->user->name ?? null}}</h5>

@@ -30,7 +30,7 @@
 
 <!-- REVOLUTION LAYERS STYLES -->
 <link rel='stylesheet' id='rs-plugin-settings-css' href="{{asset('revolution/css/rs6.css')}}"> 
-
+<link href="{{ asset('backend/src/plugins/src/sweetalerts2/sweetalerts2.css') }}" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
@@ -91,7 +91,37 @@
   
     <script  src="{{asset('revolution/js/revolution.tools.min.js')}}"></script>
     <script  src="{{asset('revolution/js/rs6.min.js')}}"></script>
-
+    <script src="{{ asset('backend/src/plugins/src/sweetalerts2/sweetalerts2.min.js') }}"></script>
+    <script>
+        @if (session('success'))
+            Swal.fire({
+                title: "Succès",
+                text: "{{ session('success') }}",
+                icon: "success"
+            });
+        @endif
+        @if (session('warning'))
+        Swal.fire({
+                title: "Désolé",
+                html: "{{ session('warning') }}",
+                icon: "warning"
+            });
+        @endif
+        @if (session('error'))
+            Swal.fire({
+                    title: "Erreur",
+                    text: "{{ session('error') }}",
+                    icon: "error"
+            });
+        @endif
+        @if ($errors->any())
+            Swal.fire({
+                    title: "Erreurs",
+                    text: "{{ $errors->first() }}",
+                    icon: "error"
+            });
+        @endif
+    </script>
 </body>
 
 </html>

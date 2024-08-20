@@ -49,7 +49,7 @@
                         <div class="card-body px-0 pb-0">
                             <h5 class="card-title mb-3 post-title">{{$post->title}}</h5>
                             <div class="media mt-4 mb-0 pt-1">
-                                <img src="{{ $post->user->profile_image ?? asset('assets/images/default_user.jpeg') }}" class="card-media-image me-3" alt="">
+                                <img src="{{ $post->user->profile_image ?? asset('default_user.png') }}" class="card-media-image me-3" alt="">
                                 <div class="media-body">
                                     <h4 class="media-heading mb-1">{{ $post->user->name ?? null}}</h4>
                                     <p class="media-text">{{ $post->created_at->format('d M Y') }}</p>

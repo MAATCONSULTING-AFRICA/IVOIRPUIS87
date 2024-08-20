@@ -34,6 +34,8 @@ Route::get('/demande/devis', [HomeController::class, 'demandeDevis'])->name('dem
 Route::get('/blog/detail/{id}', [HomeController::class, 'blogDetail'])->name('blog.detail');
 Route::get('/portefeuile/detail/{id}', [HomeController::class, 'portfolioDetail'])->name('portfolio_detail');
 
+Route::post('/validate/devis', [HomeController::class, 'storeDemandeDevis'])->name('store.devis');
+
 Route::middleware(['auth'])->group(function () {
     Route::prefix('profil')->name('profil.')->group(function () {
         Route::get('index',[ProfileController::class, 'index'])->name('index');
@@ -52,14 +54,14 @@ Route::middleware(['auth'])->group(function () {
                 Route::get('create',[ServiceController::class, 'create'])->name('create');
                 Route::post('store',[ServiceController::class, 'store'])->name('store');
                 Route::get('edit/{id}',[ServiceController::class, 'edit'])->name('edit');
-                Route::put('update/{id}',[ServiceController::class, 'update'])->name('update');
+                Route::post('update/{id}',[ServiceController::class, 'update'])->name('update');
             });
             Route::prefix('portfolio')->name('portfolio.')->group(function () {
                 Route::get('index',[PortfolioController::class, 'index'])->name('index');
                 Route::get('create',[PortfolioController::class, 'create'])->name('create');
-                Route::get('store',[PortfolioController::class, 'store'])->name('store');
+                Route::post('store',[PortfolioController::class, 'store'])->name('store');
                 Route::get('edit/{id}',[PortfolioController::class, 'edit'])->name('edit');
-                Route::put('update/{id}',[PortfolioController::class, 'update'])->name('update');
+                Route::post('update/{id}',[PortfolioController::class, 'update'])->name('update');
             });
             Route::prefix('blog')->name('blog.')->group(function () {
                 Route::get('index',[BlogController::class, 'index'])->name('index');
@@ -79,6 +81,12 @@ Route::middleware(['auth'])->group(function () {
                 Route::get('create',[DevisController::class, 'create'])->name('create');
                 Route::get('edit/{id}',[DevisController::class, 'edit'])->name('edit');
                 Route::put('update/{id}',[DevisController::class, 'update'])->name('update');
+
+                Route::post('change/status/{id}',[DevisController::class, 'changeStatus'])->name('change.status');
+                Route::get('delete/{id}',[DevisController::class, 'delete'])->name('delete');
+
+                Route::post('/send-mail/{id}', [DevisController::class, 'sendMail'])->name('send.mail');
+
             });
             Route::get('settings', [AdminController::class, 'settings'])->name('settings');
             Route::get('apparence', [AdminController::class, 'apparence'])->name('apparence');
