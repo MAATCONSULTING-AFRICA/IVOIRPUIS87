@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Tag;
 use App\Models\Post;
 use App\Models\Devis;
+use App\Models\Contact;
 use App\Models\Service;
 use App\Models\Category;
 use App\Models\Portfolio;
@@ -124,5 +125,20 @@ class HomeController extends Controller
         });
 
         return redirect()->back()->with('success', 'Dévis envoyé avec succès.');
+    }
+
+    public function contactStore(Request $request){
+
+        $data = $request->validate([
+            'name' => 'required|string|max:255',
+            'address' => 'required|email|max:255',
+            'phone' => 'required|string|max:15',
+            'subject' => 'required|string|max:255',
+            'message' => 'required|string|max:500',
+        ]);
+
+        Contact::create($data);
+
+        return redirect()->back()->with('success', 'Votre message a été envoyé et enregistré avec succès!');
     }
 }

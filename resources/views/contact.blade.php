@@ -35,36 +35,63 @@
                     </div>
                 </div>
                 <div class="col-lg-8">
-                    <form id="contact_form_3" class="contact_form_3 wrap-form clearfix" method="post" novalidate="novalidate" action="#">
+                    <form id="contact_form_3" class="contact_form_3 wrap-form clearfix" method="post" action="{{ route('contact.submit') }}">
+                        @csrf
                         <div class="row">
                             <div class="col-md-6">
                                 <label>
-                                    <span class="text-input"><input name="name" type="text" value="" placeholder="Nom & prénom(s)" required="required"></span>
+                                    <span class="text-input">
+                                        <input name="name" type="text" value="{{ old('name') }}" placeholder="Nom & prénom(s)" required="required">
+                                    </span>
+                                    @error('name')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
                                 </label>
                             </div>
                             <div class="col-md-6">
                                 <label>
-                                    <span class="text-input"><input name="address" type="text" value="" placeholder="E-mail" required="required"></span>
+                                    <span class="text-input">
+                                        <input name="address" type="text" value="{{ old('address') }}" placeholder="E-mail" required="required">
+                                    </span>
+                                    @error('address')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
                                 </label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <label>
-                                    <span class="text-input"><input name="phone" type="text" value="" placeholder="N° téléphone" required="required"></span>
+                                    <span class="text-input">
+                                        <input name="phone" type="text" value="{{ old('phone') }}" placeholder="N° téléphone" required="required">
+                                    </span>
+                                    @error('phone')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
                                 </label>
                             </div>
                             <div class="col-md-6">
                                 <label>
-                                    <span class="text-input"><input name="phone" type="text" value="" placeholder="Objet" required="required"></span>
+                                    <span class="text-input">
+                                        <input name="subject" type="text" value="{{ old('subject') }}" placeholder="Objet" required="required">
+                                    </span>
+                                    @error('subject')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
                                 </label>
                             </div>
                         </div>
                         <label>
-                            <span class="text-input"><textarea name="message" rows="5" placeholder="Votre Message" required="required"></textarea></span>
+                            <span class="text-input">
+                                <textarea name="message" rows="5" placeholder="Votre Message" required="required">{{ old('message') }}</textarea>
+                            </span>
+                            @error('message')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
                         </label>
                         <button class="submit cmt-btn cmt-btn-size-md cmt-btn-shape-square cmt-btn-style-fill cmt-btn-color-skincolor" type="submit">Envoyer</button>
                     </form>
+                    
                 </div>
             </div><!-- row end -->                
         </div>

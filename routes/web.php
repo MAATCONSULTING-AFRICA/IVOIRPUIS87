@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\backend\BlogController;
+use App\Http\Controllers\backend\ContactController;
 use App\Http\Controllers\backend\DevisController;
 use App\Http\Controllers\backend\EquipeController;
 use App\Http\Controllers\backend\PortfolioController;
@@ -28,6 +29,7 @@ Route::get('/construction-metallique', [HomeController::class, 'constructionMeta
 Route::get('/entretien-nettoyage', [HomeController::class, 'entretienNettoyage'])->name('entretien-nettoyage');
 Route::get('/service/detail/{id}', [HomeController::class, 'serviceDetail'])->name('service.detail');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+Route::post('/contact/store', [HomeController::class, 'contactStore'])->name('contact.submit');
 Route::get('/portefeuille', [HomeController::class, 'portefeuille'])->name('portefeuille');
 Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
 Route::get('/demande/devis', [HomeController::class, 'demandeDevis'])->name('demande_devis');
@@ -48,6 +50,9 @@ Route::middleware(['auth'])->group(function () {
 
     Route::middleware('isAdmin')->group(function () {
         Route::prefix('admin')->name('admin.')->group(function () {
+            Route::get('contact',[ContactController::class, 'index'])->name('contact.index');
+            Route::get('supprimer/contact/{id}',[ContactController::class, 'deleteContact'])->name('contact.delete');
+            Route::post('/send-mail/{id}', [ContactController::class, 'sendMail'])->name('send.mail');
 
             Route::prefix('service')->name('service.')->group(function () {
                 Route::get('index',[ServiceController::class, 'index'])->name('index');
