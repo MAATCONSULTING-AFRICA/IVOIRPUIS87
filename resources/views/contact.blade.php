@@ -177,7 +177,7 @@
    <!--google_map-->
     <div id="google_map" class="google_map mt_70 res-991-mt-60">
         <div class="map_container">
-        <div id="map"></div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.2772082670726!2d-3.958431524009144!3d5.374633735444769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1ecd1bfdbdb5d%3A0x39f08dedc7e882b5!2sPharmacie%20Marthe%20Robin!5e0!3m2!1sfr!2sci!4v1724243890306!5m2!1sfr!2sci" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
 

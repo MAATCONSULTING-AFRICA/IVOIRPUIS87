@@ -5,13 +5,15 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\backend\BlogController;
-use App\Http\Controllers\backend\ContactController;
 use App\Http\Controllers\backend\DevisController;
 use App\Http\Controllers\backend\EquipeController;
-use App\Http\Controllers\backend\PortfolioController;
+use App\Http\Controllers\backend\ContactController;
 use App\Http\Controllers\backend\ServiceController;
-use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\backend\SettingsController;
+use App\Http\Controllers\backend\ApparenceController;
+use App\Http\Controllers\backend\PortfolioController;
 
 
 Route::get('/admin', function () {
@@ -93,8 +95,20 @@ Route::middleware(['auth'])->group(function () {
                 Route::post('/send-mail/{id}', [DevisController::class, 'sendMail'])->name('send.mail');
 
             });
-            Route::get('settings', [AdminController::class, 'settings'])->name('settings');
-            Route::get('apparence', [AdminController::class, 'apparence'])->name('apparence');
+            Route::prefix('apparence')->name('apparence.')->group(function () {
+                Route::get('index',[ApparenceController::class, 'index'])->name('index');
+                Route::get('create',[ApparenceController::class, 'create'])->name('create');
+                Route::post('store',[ApparenceController::class, 'store'])->name('store');
+                Route::get('edit/{id}',[ApparenceController::class, 'edit'])->name('edit');
+                Route::post('update/{id}',[ApparenceController::class, 'update'])->name('update');
+            });
+            Route::prefix('settings')->name('settings.')->group(function () {
+                Route::get('index',[SettingsController::class, 'index'])->name('index');
+                Route::get('create',[SettingsController::class, 'create'])->name('create');
+                Route::post('store',[SettingsController::class, 'store'])->name('store');
+                Route::get('edit/{id}',[SettingsController::class, 'edit'])->name('edit');
+                Route::post('update/{id}',[SettingsController::class, 'update'])->name('update');
+            });
 
             Route::get('profile', [AdminController::class, 'profile'])->name('profile');
             Route::put('update', [AdminController::class, 'update'])->name('update');

@@ -97,7 +97,7 @@
                     >IP87 
                     </rs-layer><!--
 
-         --></rs-slide>
+            --></rs-slide>
 
             <rs-slide data-key="rs-4" data-title="Slide" data-thumb="{{asset('images/slides/slider-mainbg-002.jpg')}}" data-anim="ei:d;eo:d;s:1000;r:0;t:fade;sl:0;">
 
