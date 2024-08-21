@@ -15,8 +15,14 @@ use Illuminate\Support\Facades\Mail;
 class HomeController extends Controller
 {
     public function home(){
+        $portfolios = Portfolio::all();
+        $categories = Portfolio::select('category')->distinct()->get();
         $posts = Post::with(['comments.user', 'tags', 'likes', 'user'])->get();
-        return view('home', ['posts'=> $posts]);
+        return view('home', [
+            'posts'=> $posts,
+            'portfolios' => $portfolios,
+            'categories' => $categories,
+        ]);
     }
     
     public function blog(){

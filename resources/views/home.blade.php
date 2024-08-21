@@ -509,109 +509,63 @@
 
 
   <!--portfolio-section-->
-  <section class="cmt-row portfolio-section bg-img5 clearfix">
-      <div class="container">
-          <!-- row -->
-          <div class="row">
-              <div class="col-lg-7 col-md-8 col-sm-10 m-auto">
-                  <!-- section-title -->
-                  <div class="section-title title-style-center_text">
-                      <div class="title-header">
-                          <h2 class="title">Portefeuille de projets</h2>
-                      </div>
-                      <div class="title-desc"><p>Quelques images den nos différents travaux réalisés</p></div>
-                  </div><!-- section-title end -->
-              </div>
-          </div><!-- row end -->
-          <div class="row">
-              <div class="col-lg-12">
-                  <div class="cmt-tabs cmt-tab-style-04 pt-15">
-                      <ul class="tabs portfolio-filter">
-                          <li class="tab active"><a href="#" data-filter="*">Tous</a></li>
-                          <li class="tab"><a href="#" data-filter=".industrial-objects">Construction</a></li>
-                          <li class="tab"><a href="#" data-filter=".offices">Néttoyage de chantier</a></li>
-                          <li class="tab"><a href="#" data-filter=".residences">Imprimerie</a></li>
-                          <li class="tab"><a href="#" data-filter=".retail-objects">Lotissement</a></li>
-                      </ul>
-                  </div>
-                  <div class="content-tab">
-                      <!-- content-inner -->
-                      <div class="row isotope-project">
-                          <div class="col-lg-3 col-md-6 col-sm-6 project_item offices industrial-objects">
-                              <!-- featured-imagebox-portfolio -->
-                              <div class="featured-imagebox featured-imagebox-portfolio style3">
-                                  <div class="cmt-box-view-overlay cmt-portfolio-box-view-overlay">
-                                      <!-- featured-thumbnail -->
-                                      <div class="featured-thumbnail"> 
-                                          <img class="img-fluid" src="{{asset('images/portfolio/portfolio-01.jpg')}}" alt="image"> 
-                                      </div>
-                                      <!-- featured-thumbnail end-->
-                                      <div class="cmt-media-link">
-                                          <a class="cmt_prettyphoto cmt_image" title="Electrical Appliance" href="{{asset('images/portfolio/project-1-1200x800.jpg')}}">
-                                              <i class="fa fa-search"></i>
-                                          </a>
-                                          <a href="electrical-appliance.html" class="cmt_pf_link"><i class="fa fa-link"></i></a>
-                                      </div>
-                                  </div>
-                              </div><!-- featured-imagebox-portfolio end-->
-                          </div>
-                          <div class="col-lg-3 col-md-6 col-sm-6 project_item offices residences">
-                              <!-- featured-imagebox-portfolio -->
-                              <div class="featured-imagebox featured-imagebox-portfolio style3">
-                                  <div class="cmt-box-view-overlay cmt-portfolio-box-view-overlay">
-                                      <!-- featured-thumbnail -->
-                                      <div class="featured-thumbnail">
-                                          <a href="#"><img class="img-fluid" src="{{asset('images/portfolio/portfolio-02.jpg')}}" alt="image"></a>
-                                      </div><!-- featured-thumbnail end-->
-                                      <div class="cmt-media-link">
-                                          <a class="cmt_prettyphoto cmt_image" title="Thyristor Static Switches" href="{{asset('images/portfolio/project-2-1200x800.jpg')}}">
-                                              <i class="fa fa-search"></i>
-                                          </a>
-                                          <a href="thyristor-static-switches.html" class="cmt_pf_link"><i class="fa fa-link"></i></a>
-                                      </div>
-                                  </div>
-                              </div><!-- featured-imagebox-portfolio -->
-                          </div>
-                          <div class="col-lg-3 col-md-6 col-sm-6 project_item offices residences">
-                              <!-- featured-imagebox-portfolio -->
-                              <div class="featured-imagebox featured-imagebox-portfolio style3">
-                                  <div class="cmt-box-view-overlay cmt-portfolio-box-view-overlay">
-                                      <!-- featured-thumbnail -->
-                                      <div class="featured-thumbnail">
-                                          <a href="#"><img class="img-fluid" src="{{asset('images/portfolio/portfolio-03.jpg')}}" alt="image"></a>
-                                      </div><!-- featured-thumbnail end-->
-                                      <div class="cmt-media-link">
-                                          <a class="cmt_prettyphoto cmt_image" title="Ultrasonic Radar" href="{{asset('images/portfolio/project-3-1200x800.jpg')}}">
-                                              <i class="fa fa-search"></i>
-                                          </a>
-                                          <a href="ultrasonic-radar.html" class="cmt_pf_link"><i class="fa fa-link"></i></a>
-                                      </div>
-                                  </div>
-                              </div><!-- featured-imagebox-portfolio -->
-                          </div>
-                          <div class="col-lg-3 col-md-6 col-sm-6 project_item offices retail-objects">
-                              <!-- featured-imagebox-portfolio -->
-                              <div class="featured-imagebox featured-imagebox-portfolio style3">
-                                  <div class="cmt-box-view-overlay cmt-portfolio-box-view-overlay">
-                                      <!-- featured-thumbnail -->
-                                      <div class="featured-thumbnail">
-                                          <a href="#"><img class="img-fluid" src="{{asset('images/portfolio/portfolio-04.jpg')}}" alt="image"></a>
-                                      </div><!-- featured-thumbnail end-->
-                                      <div class="cmt-media-link">
-                                          <a class="cmt_prettyphoto cmt_image" title="Temperature Controlled" href="{{asset('images/portfolio/project-4-1200x800.jpg')}}">
-                                              <i class="fa fa-search"></i>
-                                          </a>
-                                          <a href="temperature-controlled.html" class="cmt_pf_link"><i class="fa fa-link"></i></a>
-                                      </div>
-                                  </div>
-                              </div><!-- featured-imagebox-portfolio -->
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div><!-- row end -->
-      </div>
-  </section>
+    <section class="cmt-row portfolio-section bg-img5 clearfix">
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <div class="col-lg-7 col-md-8 col-sm-10 m-auto">
+                    <!-- section-title -->
+                    <div class="section-title title-style-center_text">
+                        <div class="title-header">
+                            <h2 class="title">Portefeuille de projets</h2>
+                        </div>
+                        <div class="title-desc"><p>Quelques images de nos différents travaux réalisés</p></div>
+                    </div><!-- section-title end -->
+                </div>
+            </div><!-- row end -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="cmt-tabs cmt-tab-style-04 pt-15">
+                        <ul class="tabs portfolio-filter">
+                            <li class="tab active"><a href="#" data-filter="*">Tous</a></li>
+                            @foreach($categories as $category)
+                                <li class="tab"><a href="#" data-filter=".{{ Str::slug($category->category) }}">{{ $category->category }}</a></li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    <div class="content-tab">
+                        <!-- content-inner -->
+                        <div class="row isotope-project">
+                            @foreach($portfolios as $portfolio)
+                                <div class="cmt-box-col-wrapper col-lg-4 col-md-4 col-sm-6 project_item {{ Str::slug($portfolio->category) }}">
+                                    <!-- featured-imagebox-portfolio -->
+                                    <div class="featured-imagebox featured-imagebox-portfolio cmt-bgcolor-darkgrey style1">
+                                        <!-- cmt-box-view-overlay -->
+                                        <div class="cmt-box-view-overlay">
+                                            <!-- featured-thumbnail -->
+                                            <div class="featured-thumbnail">
+                                                <img class="img-fluid" src="{{$portfolio->image ? asset($portfolio->image) : '' }}" alt="{{$portfolio->title}}">
+                                            </div><!-- featured-thumbnail end-->
+                                            <div class="featured-content">
+                                                <div class="featured-desc">
+                                                    <p>{{ \Illuminate\Support\Str::limit(strip_tags($portfolio->description), 20, '...') }}</p>
+                                                </div>
+                                                <div class="featured-title">
+                                                    <h5><a href="{{route('portfolio_detail', $portfolio->id)}}">{{$portfolio->title}}</a></h5>
+                                                </div>
+                                                <a class="cmt-btn cmt-btn-size-sm cmt-btn-shape-round cmt-btn-style-fill cmt-btn-color-skincolor" href="{{route('portfolio_detail', $portfolio->id)}}">Plus de détail</a>
+                                            </div>
+                                            
+                                        </div>
+                                    </div><!-- featured-imagebox-portfolio -->
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            </div><!-- row end -->
+        </div>
+    </section>
   <!--portfolio-section end-->
 
 
