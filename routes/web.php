@@ -100,7 +100,7 @@ Route::middleware(['auth'])->group(function () {
                 Route::get('create',[ApparenceController::class, 'create'])->name('create');
                 Route::post('store',[ApparenceController::class, 'store'])->name('store');
                 Route::get('edit/{id}',[ApparenceController::class, 'edit'])->name('edit');
-                Route::post('update/{id}',[ApparenceController::class, 'update'])->name('update');
+                Route::post('update/',[ApparenceController::class, 'update'])->name('update');
             });
             Route::prefix('settings')->name('settings.')->group(function () {
                 Route::get('index',[SettingsController::class, 'index'])->name('index');

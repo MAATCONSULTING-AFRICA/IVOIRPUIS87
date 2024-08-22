@@ -26,5 +26,8 @@ class AppServiceProvider extends ServiceProvider
         View::composer('*', function ($view) {
             $view->with('recent_blogs', getBlogs());
         });
+        View::composer('*', function ($view) {
+            $view->with('apparence', apparence());
+        });
     }
 }

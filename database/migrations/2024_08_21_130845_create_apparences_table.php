@@ -15,21 +15,21 @@ return new class extends Migration
             $table->id();
             $table->string('slide1_image')->nullable();
             $table->string('slide1_titre')->nullable();
-            $table->string('slide1_description')->nullable();
+            $table->longText('slide1_description')->nullable();
             $table->string('slide1_button_title')->nullable();
             $table->string('slide1_button_link')->nullable();
             $table->string('section1_title')->nullable();
 
             $table->string('slide2_image')->nullable();
             $table->string('slide2_titre')->nullable();
-            $table->string('slide2_description')->nullable();
+            $table->longText('slide2_description')->nullable();
             $table->string('slide2_button_title')->nullable();
             $table->string('slide2_button_link')->nullable();
             $table->string('section2_title')->nullable();
             
             $table->string('slide3_image')->nullable();
             $table->string('slide3_titre')->nullable();
-            $table->string('slide3_description')->nullable();
+            $table->longText('slide3_description')->nullable();
             $table->string('slide3_button_title')->nullable();
             $table->string('slide3_button_link')->nullable();
             $table->string('section3_title')->nullable();

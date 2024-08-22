@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Apparence;
 use App\Models\Post;
 use App\Models\Service;
 
@@ -16,4 +17,8 @@ if (!function_exists('getServiceById')) {
     {
         return Service::find($id);
     }
+}
+function apparence(){
+    $apparence = Apparence::find(1);
+    return $apparence;
 }
