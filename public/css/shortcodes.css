@@ -226,14 +226,15 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-.col-bg-img-three.cmt-col-bgimage-yes .cmt-col-wrapper-bg-layer{
-    background-image: url(../images/bg-image/col-bgimage-3.jpg);
+.col-bg-img-three.cmt-col-bgimage-yes .cmt-col-wrapper-bg-layer {
+
     background-position: 65% 65%;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.col-bg-img-four.cmt-col-bgimage-yes .cmt-col-wrapper-bg-layer{
-    background-image: url(../images/bg-image/col-bgimage-4.jpg);
+
+.col-bg-img-four.cmt-col-bgimage-yes .cmt-col-wrapper-bg-layer {
+    background-image: url("{{ $apparence->image_bg }}");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

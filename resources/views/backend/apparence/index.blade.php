@@ -8,7 +8,7 @@
             @include('partials.__breadcrumbs')
             <!-- /BREADCRUMB -->
             <div class="row layout-top-spacing">
-                <div class="col-md-12 mx-auto">
+                <div class="col-md-10 mx-auto">
                     <form action="{{route('admin.apparence.update')}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         
@@ -182,7 +182,6 @@
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Fonction pour prévisualiser une image
             function previewImage(input, imagePreviewId) {
                 if (input.files && input.files[0]) {
                     const reader = new FileReader();
@@ -192,8 +191,7 @@
                     reader.readAsDataURL(input.files[0]);
                 }
             }
-    
-            // Attacher la fonction aux éléments input file
+
             document.querySelector('input[name="slide1_image"]').addEventListener('change', function () {
                 previewImage(this, 'slide1_preview');
             });

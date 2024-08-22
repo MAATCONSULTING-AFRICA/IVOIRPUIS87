@@ -58,7 +58,7 @@
           <!-- row -->
           <div class="row">
               <div class="col-lg-4">
-                  <div class="col-bg-img-one cmt-bg cmt-col-bgimage-yes cmt-bgcolor-skincolor index-spacing-2">
+                  <div class="col-bg-img-one cmt-bg cmt-col-bgimage-yes cmt-bgcolor-skincolor index-spacing-2" style="background-image: url('{{ $apparence->image_atout }}'); background-position: center; background-repeat: no-repeat; background-size: cover;">
                       <div class="cmt-col-wrapper-bg-layer cmt-bg-layer">
                           <div class="cmt-col-wrapper-bg-layer-inner"></div>
                       </div>
@@ -126,7 +126,7 @@
           <!-- row -->
           <div class="row no-gutters">
               <div class="col-12">
-                  <div class="col-bg-img-three cmt-bg cmt-col-bgimage-yes  index-spacing-4">
+                  <div class="col-bg-img-three cmt-bg cmt-col-bgimage-yes  index-spacing-4" style="background-image: url('{{ $apparence->image_atout }}'); background-position: 65% 65%; background-repeat: no-repeat; background-size: cover;"></div>>
                       <div class="cmt-col-wrapper-bg-layer cmt-bg-layer"></div>
                       <div class="layer-content">
                       </div>
@@ -177,102 +177,7 @@
   <!-- pricing-section -->
   <section class="cmt-row pricing-section bg-img2 clearfix">
       <div class="container">
-          <!-- row -->
-          {{-- <div class="row">
-              <div class="col-lg-12">
-                  <!-- section title -->
-                  <div class="section-title title-style-center_text">
-                      <div class="title-header without-seperator">
-                          <h5>Our pricing & plans</h5>
-                          <h2 class="title">Best Maintenance Plans</h2>
-                      </div>
-                  </div>
-                  <!-- section title end -->
-              </div>
-          </div><!-- row end --> --}}
-          {{-- <div class="row slick_slider slick-arrows-style1" data-slick='{"slidesToShow": 2, "slidesToScroll": 1 , "dots":false, "arrows":true, "autoplay":false, "infinite":true, "centerMode":false, "responsive": [{"breakpoint":870,"settings":{"slidesToShow": 2}}, {"breakpoint":500,"settings":{"slidesToShow": 1}}]}' >
-              <div class="col-lg-6 col-md-12 col-sm-12">
-                  <div class="cmt-pricing-plan maintenance-plan">
-                      <div class="cmt-p_table-body">
-                          <div class="cmt-p_table-tag cmt-bgcolor-skincolor">POPULAR</div>
-                          <div class="cmt-p_table-head">
-                              <div class="cmt-p_table-icon">
-                                  <div class="cmt-icon cmt-icon_element-onlytxt cmt-icon_element-size-lg cmt-icon_element-color-skincolor">
-                                      <i class="flaticon flaticon-automobile-2"></i>
-                                  </div>
-                              </div>
-                              <div class="cmt-p_table-title">
-                                  <h5>Commercial</h5>
-                              </div>
-                              <div class="cmt-p_table-amount">
-                                  <h5>$120</h5>
-                              </div>
-                          </div>
-                          <ul class="cmt-p_table-features">
-                              <li><i class="ti ti-check"></i>Monthly Inspection</li>
-                              <li><i class="ti ti-check"></i>General Repair</li>
-                              <li><i class="ti ti-check"></i>Maintenance</li>
-                              <li><i class="ti ti-check"></i>Fixing of Faulty wiring</li>
-                              <li><i class="ti ti-check"></i>Electrical Geyser Repair</li>
-                          </ul>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-lg-6 col-md-12 col-sm-12">
-                  <div class="cmt-pricing-plan maintenance-plan">
-                      <div class="cmt-p_table-body">
-                          <div class="cmt-p_table-tag cmt-bgcolor-skincolor">20% Off</div>
-                          <div class="cmt-p_table-head">
-                              <div class="cmt-p_table-icon">
-                                  <div class="cmt-icon cmt-icon_element-onlytxt cmt-icon_element-size-lg cmt-icon_element-color-skincolor">
-                                      <i class="flaticon flaticon-mechanical"></i>
-                                  </div>
-                              </div>
-                              <div class="cmt-p_table-title">
-                                  <h5>Industries</h5>
-                              </div>
-                              <div class="cmt-p_table-amount">
-                                  <h5>$185</h5>
-                              </div>
-                          </div>
-                          <ul class="cmt-p_table-features">
-                              <li><i class="ti ti-check"></i>Monthly Inspection</li>
-                              <li><i class="ti ti-check"></i>General Repair</li>
-                              <li><i class="ti ti-check"></i>Maintenance</li>
-                              <li><i class="ti ti-check"></i>Fixing of Faulty wiring</li>
-                              <li><i class="ti ti-check"></i>Electrical Geyser Repair</li>
-                          </ul>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-lg-6 col-md-12 col-sm-12">
-                  <div class="cmt-pricing-plan maintenance-plan">
-                      <div class="cmt-p_table-body">
-                          <div class="cmt-p_table-tag cmt-bgcolor-skincolor">POPULAR</div>
-                          <div class="cmt-p_table-head">
-                              <div class="cmt-p_table-icon">
-                                  <div class="cmt-icon cmt-icon_element-onlytxt cmt-icon_element-size-lg cmt-icon_element-color-skincolor">
-                                      <i class="flaticon flaticon-wheel"></i>
-                                  </div>
-                              </div>
-                              <div class="cmt-p_table-title">
-                                  <h5>Residential</h5>
-                              </div>
-                              <div class="cmt-p_table-amount">
-                                  <h5>$175</h5>
-                              </div>
-                          </div>
-                          <ul class="cmt-p_table-features">
-                              <li><i class="ti ti-check"></i>Monthly Inspection</li>
-                              <li><i class="ti ti-check"></i>General Repair</li>
-                              <li><i class="ti ti-check"></i>Maintenance</li>
-                              <li><i class="ti ti-check"></i>Fixing of Faulty wiring</li>
-                              <li><i class="ti ti-check"></i>Electrical Geyser Repair</li>
-                          </ul>
-                      </div>
-                  </div>
-              </div>
-          </div> --}}
+          
           <!-- row -->
           <div class="row">
               <div class="col-lg-9 m-auto">
@@ -431,7 +336,7 @@
       <div class="container">
           <div class="row no-gutters mt_115 res-991-mt_30">
               <div class="col-lg-6">
-                  <div class="col-bg-img-two cmt-bg cmt-col-bgimage-yes cmt-bgcolor-skincolor index-spacing-5">
+                  <div class="col-bg-img-two cmt-bg cmt-col-bgimage-yes cmt-bgcolor-skincolor index-spacing-5" style="background-image: url('{{ $apparence->image_atout }}');background-position: left; background-repeat: no-repeat; background-size: cover; "></div>
                       
                   </div>
               </div>
@@ -574,7 +479,7 @@
           <!-- row -->
           <div class="row no-gutters">
               <div class="col-xl-12">
-                  <div class="col-bg-img-four cmt-bg cmt-col-bgimage-yes index-spacing-6">
+                  <div class="col-bg-img-four cmt-bg cmt-col-bgimage-yes index-spacing-6" style="background-image: url('{{ $apparence->image_atout }}'); background-position: center; background-repeat: no-repeat; background-size: cover;">
                       <div class="cmt-col-wrapper-bg-layer cmt-bg-layer"></div>
                       <div class="layer-content">
                           <div class="d-flex align-items-center flex-column text-center cmt-textcolor-white">
@@ -604,8 +509,8 @@
                                   <p>contactez nous pour une meilleure gestion.</p>
                               </div>
                           </div>
-                          <a class="cmt-btn cmt-btn-size-md cmt-btn-shape-square cmt-btn-style-fill cmt-icon-btn-left cmt-btn-color-skincolor mt-15 mr-2" href="about-2.html"><i class="fa fa-phone"></i>Give us a call</a>
-                          <a class="cmt-btn cmt-btn-size-md cmt-btn-shape-square cmt-btn-style-border cmt-icon-btn-left cmt-btn-color-skincolor mt-15" href="about-3.html"><i class="fa fa-bolt"></i>Free estimate</a>
+                          <a class="cmt-btn cmt-btn-size-md cmt-btn-shape-square cmt-btn-style-fill cmt-icon-btn-left cmt-btn-color-skincolor mt-15 mr-2" href="{{route('contact')}}"><i class="fa fa-phone"></i>Contactez-nous</a>
+                          <a class="cmt-btn cmt-btn-size-md cmt-btn-shape-square cmt-btn-style-border cmt-icon-btn-left cmt-btn-color-skincolor mt-15" href="{{route('contact')}}"><i class="fa fa-bolt"></i>Demander un devis</a>
                       </div>
                   </div>
               </div>
